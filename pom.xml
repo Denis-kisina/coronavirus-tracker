@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>io.deniskisina</groupId>
 	<artifactId>coronavirus-tracker</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>3.8.1</version>
 	<name>coronavirus-tracker</name>
 	<description>Demo project for Spring Boot</description>
 
