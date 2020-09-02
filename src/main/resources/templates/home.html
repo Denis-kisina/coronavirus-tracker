@@ -4,25 +4,39 @@
 
 <head>
     <title>Corona Tracker Application</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link rel="stylesheet" type="text/css" media="all"
-          href="../../css/gtvg.css" th:href="@{/css/gtvg.css}" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
 
 <body>
 
-<table>
-    <tr>
-        <th>State</th>
-        <th>Country</th>
-        <th>Total Cases Reported</th>
-    </tr>
-    <tr th:each="locationStat : ${locationStats}">
-        <td th:text="${locationStat.state}"></td>
-        <td th:text="${locationStat.country}"></td>
-        <td th:text="${locationStat.latestTotalReport}">0</td>
-    </tr>
-</table>
+<div class="container">
+    <h1>Corona Tracker Application</h1>
+    <p>This application lists the current number of cases reported across the globe</p>
+
+    <div class="jumbotron">
+        <h1 class="display-4" th:text="${totalReportedCases}">Hello, world!</h1>
+        <p class="lead">Total cases reported as of today.</p>
+
+
+    </div>
+
+    <table class="table">
+        <tr>
+            <th>State</th>
+            <th>Country</th>
+            <th>Total Cases Reported</th>
+            <th>Changes since Last Day</th>
+        </tr>
+        <tr th:each="locationStat : ${locationStats}">
+            <td th:text="${locationStat.state}"></td>
+            <td th:text="${locationStat.country}"></td>
+            <td th:text="${locationStat.latestTotalReport}">0</td>
+            <td th:text="${locationStat.diffFromPreviousDay}">0</td>
+        </tr>
+    </table>
+</div>
 
 </body>
 
