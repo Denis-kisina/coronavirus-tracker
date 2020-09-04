@@ -56,20 +56,6 @@
 		</dependency>
 
 
-<!--		&lt;!&ndash; https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-maven-plugin &ndash;&gt;-->
-<!--		<dependency>-->
-<!--			<groupId>org.springframework.boot</groupId>-->
-<!--			<artifactId>spring-boot-maven-plugin</artifactId>-->
-<!--			<version>2.3.3.RELEASE</version>-->
-<!--		</dependency>-->
-		<dependency>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-compiler-plugin</artifactId>
-			<version>3.8.1</version>
-			<type>maven-plugin</type>
-		</dependency>
-
-
 	</dependencies>
 
 	<build>
@@ -77,7 +63,7 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-
+				<version>2.3.3.RELEASE</version>
 			</plugin>
 		</plugins>
 	</build>
